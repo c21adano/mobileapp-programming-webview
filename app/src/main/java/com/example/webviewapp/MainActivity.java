@@ -5,6 +5,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -12,7 +15,10 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    private WebView AdamsWebView;
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
@@ -62,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        AdamsWebView = findViewById(R.id.my_webview);
+        AdamsWebView.setWebViewClient(new WebViewClient());
+        WebSettings webSettings = AdamsWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        AdamsWebView.loadUrl("https://www.his.se/");
+
     }
 
     @Override
