@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showInternalWebPage(){
-        AdamsWebView.loadUrl("https://www.his.se/");
+        AdamsWebView.loadUrl("file:///android_assets/demo.html");
     }
 
     @Override
