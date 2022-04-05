@@ -21,11 +21,12 @@ public class MainActivity extends AppCompatActivity {
     private WebView AdamsWebView;
 
     public void showExternalWebPage(){
+
         AdamsWebView.loadUrl("https://www.his.se/");
     }
 
     public void showInternalWebPage(){
-        AdamsWebView.loadUrl("file:///android_assets/demo.html");
+        AdamsWebView.loadUrl("file:///android_asset/demo.html");
     }
 
     @Override
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         AdamsWebView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = AdamsWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        AdamsWebView.loadUrl("https://www.his.se/");
+
 
     }
 
