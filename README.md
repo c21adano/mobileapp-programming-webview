@@ -6,7 +6,7 @@
 _Du kan ta bort all text som finns sedan tidigare_.
 
 Skapade en web app med en extern och en intern webview.
-Började med att lägga till webview element i content_main. sen ändrades webviews id till my_webview
+Började med att lägga till webview element i content_main. sen ändrades webviews id till my_webview.
 La till denna koden till oncreate:
 
 ```
